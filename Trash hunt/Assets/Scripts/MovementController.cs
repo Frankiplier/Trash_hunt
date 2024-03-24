@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerMovementScript : MonoBehaviour
 {
+    [SerializeField] public GameObject icon;
+    public bool IsDisplayed = false;
+
     // normal movement 
     public Rigidbody2D player;
     public float speed;
@@ -26,6 +29,7 @@ public class PlayerMovementScript : MonoBehaviour
     {
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        icon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,7 +39,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             return;
         }
-        
+
         // definicja kierunku i zapisywanie w logu
         direction = Input.GetAxis("Horizontal");
 
@@ -65,13 +69,29 @@ public class PlayerMovementScript : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
-        // ify na trigger od spadania
+        // ify na trigger od spadania i pojawianie sie ikonki interakcji 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Respawn")
         {
             transform.position = respawnPoint;
         }
+
+        if (collision.tag == "Street" && IsDisplayed == false)
+        {
+            icon.SetActive(true);
+            IsDisplayed = true;
+        }
+    }
+
+        // if na znikanie ikonki interakcji 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+       if (collision.tag == "Street")
+        {
+            icon.SetActive(false);
+            IsDisplayed = false;
+        } 
     }
 
     private IEnumerator Dash()
