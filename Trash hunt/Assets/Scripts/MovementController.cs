@@ -24,7 +24,6 @@ public class PlayerMovementScript : MonoBehaviour
     {
         // definicja kierunku i zapisywanie w logu
         direction = Input.GetAxis("Horizontal");
-        Debug.Log(direction);
 
         // ify na sterowanie postacia lewo-prawo
         if (direction < 0)  
