@@ -47,10 +47,10 @@ public class PlayerMovementScript : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
         }
 
-        // ify na trigger od spandania i zbieranie nasionek
+        // ify na trigger od spadania
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "FallDetector")
+            if (collision.tag == "Respawn")
             {
                 transform.position = respawnPoint;
             }
