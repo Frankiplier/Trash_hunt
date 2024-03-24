@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovementScript : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     [SerializeField] public GameObject icon;
     public bool IsDisplayed = false;
