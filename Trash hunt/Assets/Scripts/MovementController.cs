@@ -102,6 +102,8 @@ public class MovementController : MonoBehaviour
         if (canDark == true && Input.GetKeyDown(KeyCode.E))
         {
             flash.SetActive(false);
+
+            StartCoroutine(WaitBeforeLight());
         }
     }
 
@@ -185,5 +187,12 @@ public class MovementController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private IEnumerator WaitBeforeLight()
+    {
+        yield return new WaitForSeconds(10);
+
+        flash.SetActive(true);
     }
 }
