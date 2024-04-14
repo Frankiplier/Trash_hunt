@@ -23,7 +23,7 @@ public class MovementController : MonoBehaviour
     public Transform fallDetector;
 
     // dashing
-    private bool canDash = true;
+    public bool canDash = true;
     private bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
@@ -71,7 +71,7 @@ public class MovementController : MonoBehaviour
         }
 
         // if na dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && IsHiding == false)
         {
             StartCoroutine(Dash());
         }
@@ -84,11 +84,13 @@ public class MovementController : MonoBehaviour
         {
             speed.variable = 1.5f;
             IsHiding = true;
+            canDash = false;
         }
         else if (canHide == true && Input.GetKeyUp(KeyCode.LeftControl))
         {
             speed.variable = 3f;
             IsHiding = false;
+            canDash = true;
         }
         else if (canHide == false)
         {
