@@ -6,16 +6,12 @@ using UnityEngine.UI;
 public class MovementController : MonoBehaviour
 {
     [SerializeField] public GameObject icon;
-    [SerializeField] public GameObject green;
-    [SerializeField] public GameObject yellow;
-    [SerializeField] public GameObject red;
-    [SerializeField] public GameObject busted;
-    [SerializeField] public GameObject flash;
 
     // bools
     public bool IsDisplayed = false;
-    private bool canHide = true;
-    private bool canDark = false;
+    public bool canHide = true;
+    public bool canDark = false;
+    public bool IsHiding = false;
 
     // normal movement 
     public Rigidbody2D player;
@@ -39,10 +35,6 @@ public class MovementController : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
-        green.SetActive(true);
-        yellow.SetActive(false);
-        red.SetActive(false);
-        flash.SetActive(true);
     }
 
     // Update is called once per frame
@@ -84,96 +76,62 @@ public class MovementController : MonoBehaviour
         // ify na ukrywanie sie
         if (canHide == true && Input.GetKeyDown(KeyCode.LeftControl))
         {
-            busted.SetActive(false);
             speed = 1.5f;
+            IsHiding = true;
         }
         else if (canHide == true && Input.GetKeyUp(KeyCode.LeftControl))
         {
-            busted.SetActive(true);
             speed = 3f;
+            IsHiding = false;
         }
         else if (canHide == false)
         {
-            busted.SetActive(true);
             speed = 3f;
-        }
-
-        // if na wylaczanie swiatla
-        if (canDark == true && Input.GetKeyDown(KeyCode.E))
-        {
-            flash.SetActive(false);
-
-            StartCoroutine(WaitBeforeLight());
+            IsHiding = false;
         }
     }
 
         // ify na trigger od spadania i pojawianie sie ikonki interakcji 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Respawn")
+        if (other.tag == "Respawn")
         {
             transform.position = respawnPoint;
         }
-
-        if (collision.tag == "Street" && IsDisplayed == false)
-        {
-            icon.SetActive(true);
-            IsDisplayed = true;
-        }
-
-        if (collision.tag == "Light")
-        {
-            icon.SetActive(true);
-            IsDisplayed = true;
-
-            canHide = false;
-            canDark = true;
-        }
-
-        if (collision.tag == "Human")
-        {
-            green.SetActive(false);
-            yellow.SetActive(true);
-        }
-
-        if (collision.tag == "Red")
-        {
-            green.SetActive(false);
-            yellow.SetActive(false);
-            red.SetActive(true);
-        }
     }
 
-        // if na znikanie ikonki interakcji 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D other)
     {
-       if (collision.tag == "Street")
+        if (other.tag == "Light")
         {
-            icon.SetActive(false);
-            IsDisplayed = false;
-        } 
+            canHide = false;
+        }
 
-        if (collision.tag == "Light")
+        if (other.tag == "Lamp")
         {
-            icon.SetActive(false);
-            IsDisplayed = false;
+            canDark = true;
 
-            canHide = true;
-            canDark = false;
-        } 
-
-        if (collision.tag == "Human")
-        {
-            yellow.SetActive(false);
-            green.SetActive(true);
-        } 
-
-        if (collision.tag == "Red")
-        {
-            red.SetActive(false);
-            yellow.SetActive(true);
-        } 
+            icon.SetActive(true);
+            IsDisplayed = true;
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Light")
+        {
+            canHide = true;
+        }
+
+        if (other.tag == "Lamp")
+        {
+            canDark = false;
+
+            icon.SetActive(false);
+            IsDisplayed = false;
+        }
+    }
+
 
     private IEnumerator Dash()
     {
@@ -187,12 +145,5 @@ public class MovementController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-    }
-
-    private IEnumerator WaitBeforeLight()
-    {
-        yield return new WaitForSeconds(10);
-
-        flash.SetActive(true);
     }
 }
