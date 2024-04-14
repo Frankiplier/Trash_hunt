@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Hooman : MonoBehaviour
 {
-    public MovementController player;
+     [SerializeField] FloatContainer speed;
+
     [SerializeField] public GameObject green;
     [SerializeField] public GameObject yellow;
     [SerializeField] public GameObject red;
@@ -20,11 +21,11 @@ public class Hooman : MonoBehaviour
     void Update()
     {
         // ify na ukrywanie sie
-        if (player.IsHiding == true)
+        if (speed.variable == 1.5f) 
         {
             yellow.GetComponent<BoxCollider2D>().enabled = false;
         }
-        else if (player.IsHiding == false)
+        else if (speed.variable == 3f) 
         {
             yellow.GetComponent<BoxCollider2D>().enabled = true;
         }
@@ -36,7 +37,6 @@ public class Hooman : MonoBehaviour
         {
             green.SetActive(false);
             yellow.SetActive(true);
-            red.SetActive(false);
         }
     }
 
@@ -46,7 +46,6 @@ public class Hooman : MonoBehaviour
         {
             green.SetActive(true);
             yellow.SetActive(false);
-            red.SetActive(false);
         }
     }
 }

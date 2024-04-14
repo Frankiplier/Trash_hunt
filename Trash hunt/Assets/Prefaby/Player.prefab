@@ -174,14 +174,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 9087986636758491821}
-  green: {fileID: 0}
-  yellow: {fileID: 0}
-  red: {fileID: 0}
-  busted: {fileID: 0}
-  flash: {fileID: 0}
   IsDisplayed: 0
+  canHide: 1
+  canDark: 0
+  IsHiding: 0
   player: {fileID: 3598013254287805648}
-  speed: 3
+  speed: {fileID: 11400000, guid: 5b224e8492f233640b6ebaac535ad5ed, type: 2}
   fallDetector: {fileID: 0}
 --- !u!1 &8211915007864101266
 GameObject:

@@ -15,8 +15,8 @@ public class MovementController : MonoBehaviour
 
     // normal movement 
     public Rigidbody2D player;
-    public float speed;
-    private float direction = 0;
+    public FloatContainer speed;
+    private float direction = 0f;
 
     // respawn point and fall detector
     private Vector3 respawnPoint;
@@ -35,6 +35,7 @@ public class MovementController : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
+        speed.variable = 3f;
     }
 
     // Update is called once per frame
@@ -51,12 +52,12 @@ public class MovementController : MonoBehaviour
         // ify na sterowanie postacia lewo-prawo
         if (direction < 0)  
         {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
+            player.velocity = new Vector2(direction * speed.variable, player.velocity.y);
             transform.localScale = new Vector2(-0.8f, 0.8f);
         }
         else if (direction > 0)
         {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
+            player.velocity = new Vector2(direction * speed.variable, player.velocity.y);
             transform.localScale = new Vector2(0.8f, 0.8f);
         }
         else
@@ -76,17 +77,17 @@ public class MovementController : MonoBehaviour
         // ify na ukrywanie sie
         if (canHide == true && Input.GetKeyDown(KeyCode.LeftControl))
         {
-            speed = 1.5f;
+            speed.variable = 1.5f;
             IsHiding = true;
         }
         else if (canHide == true && Input.GetKeyUp(KeyCode.LeftControl))
         {
-            speed = 3f;
+            speed.variable = 3f;
             IsHiding = false;
         }
         else if (canHide == false)
         {
-            speed = 3f;
+            speed.variable = 3f;
             IsHiding = false;
         }
     }
@@ -132,6 +133,10 @@ public class MovementController : MonoBehaviour
         }
     }
 
+    void OnDisable()
+    {
+        speed.variable = 0f;
+    }
 
     private IEnumerator Dash()
     {
