@@ -29,6 +29,11 @@ public class MovementController : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    void OnDisable()
+    {
+        speed.variable = 0f;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -133,9 +138,12 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    void OnDisable()
+    public void LampTurnedOff()
     {
-        speed.variable = 0f;
+        icon.SetActive(false);
+        IsDisplayed = false;
+
+        canHide = true;
     }
 
     private IEnumerator Dash()
