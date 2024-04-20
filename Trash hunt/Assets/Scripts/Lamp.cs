@@ -18,7 +18,7 @@ public class Lamp : MonoBehaviour
     {
         if (other.tag == "Player") 
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (player.canDark == true && Input.GetKeyDown(KeyCode.E))
             {
                 flash.SetActive(false);
                 lamp.GetComponent<BoxCollider2D>().enabled = false;

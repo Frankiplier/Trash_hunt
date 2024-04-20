@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour
     public bool canHide = true;
     public bool canDark = false;
     public bool IsHiding = false;
+    public bool isLight = false;
 
     // normal movement 
     public Rigidbody2D player;
@@ -106,13 +107,16 @@ public class MovementController : MonoBehaviour
         {
             transform.position = respawnPoint;
         }
-    }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
+        if (other.tag == "Street")
+        {
+            icon.SetActive(true);
+        }
+
         if (other.tag == "Light")
         {
             canHide = false;
+            isLight = true;
         }
 
         if (other.tag == "Lamp")
@@ -126,9 +130,15 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.tag == "Street")
+        {
+            icon.SetActive(false);
+        }
+
         if (other.tag == "Light")
         {
             canHide = true;
+            isLight = false;
         }
 
         if (other.tag == "Lamp")
