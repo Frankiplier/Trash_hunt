@@ -93,6 +93,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412a499790c7e84e898b69326c4af22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5849965381227218469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3916592735587427279}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3916592735587427279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849965381227218469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4964386726551833513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5986806437850749224
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,9 +421,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 2189233088833448949}
     m_Modifications:
     - target: {fileID: 3803711160234254126, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
+      propertyPath: jumpTime
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803711160234254126, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 3916592735587427279}
+    - target: {fileID: 3803711160234254126, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
       propertyPath: fallDetector
       value: 
       objectReference: {fileID: 991089796747656786}
+    - target: {fileID: 3803711160234254126, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
+      propertyPath: jumpStrenght
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803711160234254126, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803711160234254126, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4759746591068982133, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
       propertyPath: m_Name
       value: Trash panda
@@ -439,7 +490,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7621288058049565706, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3916592735587427279}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 508371fc10ae8d143b3ee4ebe67fb7f3, type: 3}
 --- !u!4 &4964386726551833513 stripped
