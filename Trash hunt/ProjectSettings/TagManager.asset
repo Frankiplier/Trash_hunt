@@ -11,6 +11,8 @@ TagManager:
   - Lamp
   - Red
   - Troll
+  - Trash
+  - Score
   layers:
   - Default
   - TransparentFX

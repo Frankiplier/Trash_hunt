@@ -12,7 +12,6 @@ public class MovementController : MonoBehaviour
     public bool canHide = true;
     public bool canDark = false;
     public bool IsHiding = false;
-    public bool isLight = false;
     private bool canJump = true;
 
     // normal movement 
@@ -42,21 +41,24 @@ public class MovementController : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    // score
+    public Text scoreText;
+    public static int score = 0;
+
     void OnDisable()
     {
         speed.variable = 0f;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
         speed.variable = 3f;
+        scoreText.text = score.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isDashing)
@@ -158,18 +160,25 @@ public class MovementController : MonoBehaviour
         if (other.tag == "Street")
         {
             icon.SetActive(true);
+            IsDisplayed = true;
+            
         }
 
         if (other.tag == "Light")
         {
             canHide = false;
-            isLight = true;
         }
 
         if (other.tag == "Lamp")
         {
             canDark = true;
 
+            icon.SetActive(true);
+            IsDisplayed = true;
+        }
+
+        if (other.tag == "Trash")
+        {
             icon.SetActive(true);
             IsDisplayed = true;
         }
@@ -180,12 +189,12 @@ public class MovementController : MonoBehaviour
         if (other.tag == "Street")
         {
             icon.SetActive(false);
+            IsDisplayed = false;
         }
 
         if (other.tag == "Light")
         {
             canHide = true;
-            isLight = false;
         }
 
         if (other.tag == "Lamp")
@@ -195,6 +204,22 @@ public class MovementController : MonoBehaviour
             icon.SetActive(false);
             IsDisplayed = false;
         }
+
+        if (other.tag == "Trash")
+        {
+            icon.SetActive(false);
+            IsDisplayed = false;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && other.tag == "Trash")
+            {
+                score += 1;
+                scoreText.text = score.ToString();
+                other.gameObject.SetActive(false);
+            }
     }
 
     public void LampTurnedOff()
