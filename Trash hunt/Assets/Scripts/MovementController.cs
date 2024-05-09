@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MovementController : MonoBehaviour
 {
     [SerializeField] public GameObject icon;
+    [SerializeField] public GameObject gameOver;
 
     // bools
     public bool IsDisplayed = false;
@@ -52,6 +53,9 @@ public class MovementController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+        gameOver.SetActive(false);
+
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
@@ -181,6 +185,18 @@ public class MovementController : MonoBehaviour
         {
             icon.SetActive(true);
             IsDisplayed = true;
+        }
+
+        if (other.tag == "Busted")
+        {
+            HealthManager.health--;
+            transform.position = respawnPoint;
+
+            if (HealthManager.health <= 0)
+            {
+                gameOver.SetActive(true);
+                Time.timeScale = 0f;
+            }
         }
     }
 
