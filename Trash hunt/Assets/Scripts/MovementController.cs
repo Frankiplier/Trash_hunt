@@ -271,13 +271,9 @@ public class MovementController : MonoBehaviour
     {
         SceneFadeManager.instance.StartFadeOut();
         yield return new WaitForSeconds(tpTime);
-
-        if (SceneFadeManager.instance.IsFadingOut)
-        {
-            SceneManager.LoadSceneAsync(0);
-            transform.position = respawnPoint;
-            yield return new WaitForSeconds(fadeTime);
-            SceneFadeManager.instance.StartFadeIn();
-        }
+        SceneManager.LoadSceneAsync(0);
+        transform.position = respawnPoint;
+        yield return new WaitForSeconds(fadeTime);
+        SceneFadeManager.instance.StartFadeIn();
     }
 }
