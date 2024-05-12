@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
 {
+    public static SceneSwapManager instance;
     [SerializeField] public GameObject icon;
     [SerializeField] public GameObject gameOver;
 
@@ -45,6 +47,10 @@ public class MovementController : MonoBehaviour
     // score
     public Text scoreText;
     public static int score = 0;
+
+    // fading
+    private float tpTime = 0.2f;
+    private float fadeTime = 1f;
 
     void OnDisable()
     {
@@ -190,7 +196,8 @@ public class MovementController : MonoBehaviour
         if (other.tag == "Busted")
         {
             HealthManager.health--;
-            transform.position = respawnPoint;
+            
+            StartCoroutine(Fade());
 
             if (HealthManager.health <= 0)
             {
@@ -258,5 +265,19 @@ public class MovementController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private IEnumerator Fade()
+    {
+        SceneFadeManager.instance.StartFadeOut();
+        yield return new WaitForSeconds(tpTime);
+
+        if (SceneFadeManager.instance.IsFadingOut)
+        {
+            SceneManager.LoadSceneAsync(0);
+            transform.position = respawnPoint;
+            yield return new WaitForSeconds(fadeTime);
+            SceneFadeManager.instance.StartFadeIn();
+        }
     }
 }
