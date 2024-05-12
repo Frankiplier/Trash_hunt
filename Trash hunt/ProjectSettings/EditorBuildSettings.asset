@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Street 3.unity
     guid: b14207634022b6248b1b7e85d9ffce1b
+  - enabled: 1
+    path: Assets/Scenes/Street 4.unity
+    guid: e5462cf577b61ea4abed04c239e82e8f
+  - enabled: 1
+    path: Assets/Scenes/Street 5.unity
+    guid: b441706576dcd624592f36de48eda7b9
+  - enabled: 1
+    path: Assets/Scenes/Street 6.unity
+    guid: 846211cd88c64c9439e7cd8831bde3b4
   m_configObjects: {}

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 131974573}
   - component: {fileID: 131974576}
   m_Layer: 0
-  m_Name: Street 1
+  m_Name: Main Street
   m_TagString: Street
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,8 +423,8 @@ Transform:
   m_GameObject: {fileID: 1081666334}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.3431, y: -4.55, z: 0}
-  m_LocalScale: {x: 83.39438, y: 1, z: 1}
+  m_LocalPosition: {x: 37.404, y: -4.55, z: 0}
+  m_LocalScale: {x: 55.273796, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1961622960}
   - component: {fileID: 1961622959}
   m_Layer: 0
-  m_Name: Street 2
+  m_Name: Street 3
   m_TagString: Street
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,7 +616,7 @@ Transform:
   m_GameObject: {fileID: 1961622958}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -1.127676, z: 0}
+  m_LocalPosition: {x: 18.4, y: -1.127676, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -626,7 +626,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 131974575}
   - {fileID: 1961622962}
+  - {fileID: 131974575}
   - {fileID: 1081666338}
   - {fileID: 1911842734}
