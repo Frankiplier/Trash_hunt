@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7d92edcac552649bc6e290754eed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetToSpawnTo: 1
+  StreetToSpawnTo: 3
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: 42b2a21309008ca4caf5b0b0f751a7e5, type: 3}
     _sceneName: Street 2
@@ -423,8 +423,8 @@ Transform:
   m_GameObject: {fileID: 1016984844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.8219, y: -4.55, z: 0}
-  m_LocalScale: {x: 48.3512, y: 1, z: 1}
+  m_LocalPosition: {x: 11.4792, y: -4.55, z: 0}
+  m_LocalScale: {x: 22.534832, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

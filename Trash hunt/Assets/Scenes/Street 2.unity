@@ -248,7 +248,7 @@ Transform:
   m_GameObject: {fileID: 18477936}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.7, y: -1.177676, z: 0}
+  m_LocalPosition: {x: -2.7, y: -1.177676, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -270,7 +270,7 @@ MonoBehaviour:
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
     _sceneName: Main Street
-  CurrentStreetPosition: 3
+  CurrentStreetPosition: 1
 --- !u!1 &878972085
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,8 +423,8 @@ Transform:
   m_GameObject: {fileID: 878972085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.6518, y: -4.55, z: 0}
-  m_LocalScale: {x: 49.666275, y: 1, z: 1}
+  m_LocalPosition: {x: 16.9169, y: -4.55, z: 0}
+  m_LocalScale: {x: 42.19647, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7d92edcac552649bc6e290754eed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetToSpawnTo: 2
+  StreetToSpawnTo: 1
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: e5462cf577b61ea4abed04c239e82e8f, type: 3}
     _sceneName: Street 4
@@ -571,7 +571,7 @@ Transform:
   m_GameObject: {fileID: 961512322}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.6, y: -1.127676, z: 0}
+  m_LocalPosition: {x: 18.3, y: -1.127676, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -612,7 +612,7 @@ MonoBehaviour:
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: b441706576dcd624592f36de48eda7b9, type: 3}
     _sceneName: Street 5
-  CurrentStreetPosition: 1
+  CurrentStreetPosition: 3
 --- !u!61 &1710911970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -719,7 +719,7 @@ Transform:
   m_GameObject: {fileID: 1710911968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -1.127676, z: 0}
+  m_LocalPosition: {x: 31.8, y: -1.127676, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

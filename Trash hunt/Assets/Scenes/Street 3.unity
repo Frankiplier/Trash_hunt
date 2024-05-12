@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7d92edcac552649bc6e290754eed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetToSpawnTo: 2
+  StreetToSpawnTo: 1
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: 846211cd88c64c9439e7cd8831bde3b4, type: 3}
     _sceneName: Street 6
@@ -413,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 1824365080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.1, y: -1.127676, z: 0}
+  m_LocalPosition: {x: 17.4, y: -1.127676, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -571,8 +571,8 @@ Transform:
   m_GameObject: {fileID: 2042743433}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.508, y: -4.55, z: 0}
-  m_LocalScale: {x: 36.705757, y: 1, z: 1}
+  m_LocalPosition: {x: 26.1444, y: -4.55, z: 0}
+  m_LocalScale: {x: 31.431139, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
