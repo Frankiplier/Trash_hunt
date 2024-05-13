@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &488081515
+--- !u!1 &401082174
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,10 +131,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 488081519}
-  - component: {fileID: 488081518}
-  - component: {fileID: 488081517}
-  - component: {fileID: 488081516}
+  - component: {fileID: 401082178}
+  - component: {fileID: 401082177}
+  - component: {fileID: 401082176}
+  - component: {fileID: 401082175}
   m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
@@ -142,13 +142,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &488081516
+--- !u!61 &401082175
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488081515}
+  m_GameObject: {fileID: 401082174}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -187,14 +187,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0125909}
   m_EdgeRadius: 0
---- !u!50 &488081517
+--- !u!50 &401082176
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488081515}
+  m_GameObject: {fileID: 401082174}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -214,13 +214,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!212 &488081518
+--- !u!212 &401082177
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488081515}
+  m_GameObject: {fileID: 401082174}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -256,7 +256,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -266,22 +266,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &488081519
+--- !u!4 &401082178
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488081515}
+  m_GameObject: {fileID: 401082174}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.4852, y: -4.55, z: 0}
-  m_LocalScale: {x: 22.201235, y: 1, z: 1}
+  m_LocalPosition: {x: -2.197, y: -4.55, z: 0}
+  m_LocalScale: {x: 35.51114, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &508413400
+--- !u!1 &597872461
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,41 +289,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 508413404}
-  - component: {fileID: 508413403}
-  - component: {fileID: 508413402}
-  - component: {fileID: 508413401}
+  - component: {fileID: 597872465}
+  - component: {fileID: 597872464}
+  - component: {fileID: 597872463}
+  - component: {fileID: 597872462}
   m_Layer: 0
-  m_Name: Street 3
+  m_Name: Main Street
   m_TagString: Street
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &508413401
+--- !u!114 &597872462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508413400}
+  m_GameObject: {fileID: 597872461}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc7d92edcac552649bc6e290754eed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetToSpawnTo: 1
+  StreetToSpawnTo: 3
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: b14207634022b6248b1b7e85d9ffce1b, type: 3}
-    _sceneName: Street 3
+    _sceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    _sceneName: Main Street
   CurrentStreetPosition: 2
---- !u!61 &508413402
+--- !u!61 &597872463
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508413400}
+  m_GameObject: {fileID: 597872461}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -362,13 +362,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!212 &508413403
+--- !u!212 &597872464
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508413400}
+  m_GameObject: {fileID: 597872461}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -404,7 +404,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.1273585, b: 0.81804764, a: 0.42745098}
+  m_Color: {r: 0.28920433, g: 0.5795437, b: 0.9150943, a: 0.42745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -414,22 +414,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &508413404
+--- !u!4 &597872465
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508413400}
+  m_GameObject: {fileID: 597872461}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.8, y: -1.127676, z: 0}
+  m_LocalPosition: {x: 2.29, y: -1.0976758, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1985514168
+--- !u!1 &1524451234
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,41 +437,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1985514172}
-  - component: {fileID: 1985514171}
-  - component: {fileID: 1985514170}
-  - component: {fileID: 1985514169}
+  - component: {fileID: 1524451238}
+  - component: {fileID: 1524451237}
+  - component: {fileID: 1524451236}
+  - component: {fileID: 1524451235}
   m_Layer: 0
-  m_Name: Street 4
+  m_Name: Roof 2
   m_TagString: Street
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1985514169
+--- !u!114 &1524451235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985514168}
+  m_GameObject: {fileID: 1524451234}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc7d92edcac552649bc6e290754eed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetToSpawnTo: 2
+  StreetToSpawnTo: 4
   _sceneToLoad:
-    _sceneAsset: {fileID: 102900000, guid: e5462cf577b61ea4abed04c239e82e8f, type: 3}
-    _sceneName: Street 4
+    _sceneAsset: {fileID: 102900000, guid: 0e170c12ada90ae42b3fb27511a671b6, type: 3}
+    _sceneName: Roof 2
   CurrentStreetPosition: 1
---- !u!61 &1985514170
+--- !u!61 &1524451236
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985514168}
+  m_GameObject: {fileID: 1524451234}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -510,13 +510,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!212 &1985514171
+--- !u!212 &1524451237
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985514168}
+  m_GameObject: {fileID: 1524451234}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -552,7 +552,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.12941176, g: 0.65473324, b: 0.94509804, a: 0.42745098}
+  m_Color: {r: 0.83470327, g: 0.29019606, b: 0.9137255, a: 0.42745098}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -562,16 +562,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1985514172
+--- !u!4 &1524451238
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985514168}
+  m_GameObject: {fileID: 1524451234}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.78, y: -1.127676, z: 0}
+  m_LocalPosition: {x: -18.3, y: -1.0976758, z: 0}
   m_LocalScale: {x: 2.95393, y: 5.92295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -581,6 +581,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 488081519}
-  - {fileID: 508413404}
-  - {fileID: 1985514172}
+  - {fileID: 401082178}
+  - {fileID: 597872465}
+  - {fileID: 1524451238}

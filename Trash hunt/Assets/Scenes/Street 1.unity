@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7d92edcac552649bc6e290754eed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetToSpawnTo: 2
+  StreetToSpawnTo: 3
   _sceneToLoad:
     _sceneAsset: {fileID: 102900000, guid: b14207634022b6248b1b7e85d9ffce1b, type: 3}
     _sceneName: Street 3
@@ -626,7 +626,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1081666338}
   - {fileID: 1961622962}
   - {fileID: 131974575}
-  - {fileID: 1081666338}
   - {fileID: 1911842734}
