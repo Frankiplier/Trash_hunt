@@ -7,6 +7,7 @@ public class Lamp : MonoBehaviour
     [SerializeField] public GameObject flash;
     public GameObject lamp;
     MovementController player;
+    private bool canTurn = false;
 
     void Start()
     {
@@ -14,11 +15,9 @@ public class Lamp : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
     }
 
-    public void OnTriggerStay2D (Collider2D other)
+    void Update()
     {
-        if (other.tag == "Player") 
-        {
-            if (player.canDark == true && Input.GetKeyDown(KeyCode.E))
+        if (player.canDark == true && canTurn == true && Input.GetKeyDown(KeyCode.E))
             {
                 flash.SetActive(false);
                 lamp.GetComponent<BoxCollider2D>().enabled = false;
@@ -28,6 +27,21 @@ public class Lamp : MonoBehaviour
     
                 StartCoroutine(WaitBeforeLight());
             }
+    }
+
+    public void OnTriggerEnter2D (Collider2D other)
+    {
+        if (other.tag == "Player") 
+        {
+            canTurn = true; 
+        }
+    }
+
+    public void OnTriggerExit2D (Collider2D other)
+    {
+        if (other.tag == "Player") 
+        {
+            canTurn = false; 
         }
     }
 

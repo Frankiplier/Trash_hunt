@@ -46,7 +46,7 @@ public class MovementController : MonoBehaviour
 
     // score
     public Text scoreText;
-    public static int score = 0;
+    public int score = 0;
 
     // fading
     private float tpTime = 0.2f;
@@ -233,16 +233,6 @@ public class MovementController : MonoBehaviour
             icon.SetActive(false);
             IsDisplayed = false;
         }
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (Input.GetKeyDown(KeyCode.E) && other.tag == "Trash")
-            {
-                score += 1;
-                scoreText.text = score.ToString();
-                other.gameObject.SetActive(false);
-            }
     }
 
     public void LampTurnedOff()
