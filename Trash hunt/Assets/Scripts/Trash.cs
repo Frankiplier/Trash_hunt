@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
+    public static Trash Instance;
+
     public GameObject trash;
     MovementController player;
     private bool canTrash = false;
+    private bool isVisible;
 
     void Start()
     {
@@ -17,7 +20,7 @@ public class Trash : MonoBehaviour
     {
         if (canTrash == true && Input.GetKeyDown(KeyCode.E))
             {
-                Destroy(trash);
+                trash.SetActive(false);
                 player.score += 1;
                 player.scoreText.text = player.score.ToString();
             }
@@ -37,5 +40,17 @@ public class Trash : MonoBehaviour
         {
             canTrash = false; 
         }
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }
