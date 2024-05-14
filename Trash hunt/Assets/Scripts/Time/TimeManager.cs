@@ -6,7 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24, minutesInHour = 60;
 
-    public float dayDuration = 30f; //ile w grze trwaja 24 h
+    public float dayDuration; //ile w grze trwaja 24 h
 
     float totalTime = 0;
     float currentTime = 0;
@@ -28,12 +28,12 @@ public class TimeManager : MonoBehaviour
         return (currentTime * hoursInDay * minutesInHour / dayDuration) % minutesInHour;
     }
 
-    // czesc kodu na ew zegary "elektryczne"
     public string Clock24Hour()
     {
         return Mathf.FloorToInt(GetHour()).ToString("00") + ":" + Mathf.FloorToInt(GetMinutes()).ToString("00");
     }
 
+    // kod na ewentualny zegar 12 godzin
     public string Clock12Hour()
     {
         int hour = Mathf.FloorToInt(GetHour());

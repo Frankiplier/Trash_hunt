@@ -23,10 +23,10 @@ public class Clock : MonoBehaviour
         minuteArm.rotation = Quaternion.Euler(0, 0, -tm.GetMinutes()*minutesToDegrees);
 
         // if na zmiane sceny po uplywie okreslonego czasu
-        // na potem: zrobic drugi if i dodac warunek zaliczenia wszystkich czynnosci
+        // na potem: zrobic drugi if i dodac bycia w alejce?
         //if (hourArm.rotation == Quaternion.Euler(0, 0, -180))
         //{
-        //    SceneManager.LoadSceneAsync(3);
+        //    SceneManager.LoadSceneAsync(0);
         //}
     }
 }
