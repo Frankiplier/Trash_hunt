@@ -193,6 +193,12 @@ public class MovementController : MonoBehaviour
             IsDisplayed = true;
         }
 
+        if (other.tag == "Trashcan")
+        {
+            icon.SetActive(true);
+            IsDisplayed = true;
+        }
+
         if (other.tag == "Busted")
         {
             HealthManager.health--;
@@ -229,6 +235,12 @@ public class MovementController : MonoBehaviour
         }
 
         if (other.tag == "Trash")
+        {
+            icon.SetActive(false);
+            IsDisplayed = false;
+        }
+
+        if (other.tag == "Trashcan")
         {
             icon.SetActive(false);
             IsDisplayed = false;

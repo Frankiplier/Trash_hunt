@@ -13,6 +13,7 @@ TagManager:
   - Troll
   - Trash
   - Score
+  - Trashcan
   layers:
   - Default
   - TransparentFX
