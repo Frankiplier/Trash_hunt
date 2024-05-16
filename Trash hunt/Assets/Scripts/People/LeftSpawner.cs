@@ -22,7 +22,7 @@ public class LeftSpawner : MonoBehaviour
         {
             SpawnHuman();
 
-            targetTime = Random.Range(5, 30);
+            targetTime = Random.Range(7, 30);
         }
     }
 
