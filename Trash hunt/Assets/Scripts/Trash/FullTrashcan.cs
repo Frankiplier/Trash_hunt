@@ -7,6 +7,7 @@ public class FullTrashcan : MonoBehaviour
     [SerializeField] public GameObject trash;
     MovementController player;
     private bool isTrash = false;
+    private bool isEmpty = false;
 
     void Start()
     {
@@ -16,10 +17,16 @@ public class FullTrashcan : MonoBehaviour
 
     void Update()
     {
-        if (isTrash == true && Input.GetKeyDown(KeyCode.E))
-            {
-                trash.SetActive(true);
-            }
+        if (isTrash == true && isEmpty == false && Input.GetKeyDown(KeyCode.E))
+        {
+            trash.SetActive(true);
+            isEmpty = true;
+        }
+
+        if (isEmpty == true && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Nie ma juz");
+        }
     }
 
     public void OnTriggerEnter2D (Collider2D other)
