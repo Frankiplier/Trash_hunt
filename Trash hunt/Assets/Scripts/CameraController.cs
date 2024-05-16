@@ -9,13 +9,16 @@ public class CameraController : MonoBehaviour
     public float offsetSmoothing;
     private Vector3 targetPosition;
 
+    // do smieci
+    [SerializeField] PickedTrashList trashList;
+
     // Update is called once per frame
     void Update()
     {
-        //locking camera on a target
+        // locking camera on a target
         targetPosition = new Vector3(target.position.x, transform.position.y, transform.position.z);
 
-        //ify na smooth przejscia kamera
+        // ify na smooth przejscia kamera
         if(target.localScale.x > 0)
         {
             targetPosition = new Vector3(targetPosition.x + offset, targetPosition.y, targetPosition.z);
@@ -25,8 +28,13 @@ public class CameraController : MonoBehaviour
             targetPosition = new Vector3(targetPosition.x - offset, targetPosition.y, targetPosition.z);
         }
 
-        //kod na czas reakcji kamery
+        // kod na czas reakcji kamery
         transform.position = Vector3.Lerp(transform.position, targetPosition, offsetSmoothing * Time.deltaTime);
     }
 
+    // kod na liste smieci
+    private void OnDisable()
+    {
+        trashList.ResetList();
+    }
 }

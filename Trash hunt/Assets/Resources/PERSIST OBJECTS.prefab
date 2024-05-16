@@ -1267,6 +1267,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4964386726551833513}
     - target: {fileID: 6432909847460341261, guid: 39031c58a7b10ae429a94cdbc2bea231, type: 3}
+      propertyPath: trashList
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bb684d3cda105948985d6308eee2570, type: 2}
+    - target: {fileID: 6432909847460341261, guid: 39031c58a7b10ae429a94cdbc2bea231, type: 3}
       propertyPath: offsetSmoothing
       value: 12
       objectReference: {fileID: 0}

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
-    public static Trash Instance;
-
+    [SerializeField] PickedTrashList pickedTrash;
+    [SerializeField] int index;
     public GameObject trash;
     MovementController player;
+    
     private bool canTrash = false;
-    private bool isVisible;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class Trash : MonoBehaviour
                 trash.SetActive(false);
                 player.score += 1;
                 player.scoreText.text = player.score.ToString();
+                pickedTrash.pickedUpTrash[index] = true;
             }
     }
 
@@ -44,13 +45,10 @@ public class Trash : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (pickedTrash.pickedUpTrash[index])
         {
             Destroy(gameObject);
             return;
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 }
