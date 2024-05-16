@@ -22,11 +22,6 @@ public class FullTrashcan : MonoBehaviour
             trash.SetActive(true);
             isEmpty = true;
         }
-
-        if (isEmpty == true && Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Nie ma juz");
-        }
     }
 
     public void OnTriggerEnter2D (Collider2D other)
