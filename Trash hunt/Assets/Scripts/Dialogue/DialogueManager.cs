@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         {
             lines.Enqueue(dialogueLine);
         }
- 
+
         DisplayNextDialogueLine();
     }
  
@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         characterName.text = currentLine.character.name;
  
         StopAllCoroutines();
- 
+
         StartCoroutine(TypeSentence(currentLine));
     }
  
