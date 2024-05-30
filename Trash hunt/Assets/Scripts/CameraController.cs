@@ -12,6 +12,11 @@ public class CameraController : MonoBehaviour
     // do smieci
     [SerializeField] PickedTrashList trashList;
 
+    void Start()
+    {
+        trashList.ResetList();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -30,11 +35,5 @@ public class CameraController : MonoBehaviour
 
         // kod na czas reakcji kamery
         transform.position = Vector3.Lerp(transform.position, targetPosition, offsetSmoothing * Time.deltaTime);
-    }
-
-    // kod na liste smieci
-    private void OnDisable()
-    {
-        trashList.ResetList();
     }
 }
