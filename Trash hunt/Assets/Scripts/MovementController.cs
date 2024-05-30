@@ -71,6 +71,7 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
+
         if (isDashing)
         {
             return;
