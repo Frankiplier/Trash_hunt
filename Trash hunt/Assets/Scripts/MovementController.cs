@@ -111,7 +111,7 @@ public class MovementController : MonoBehaviour
         // ify na skakanie z ground checkiem
         if (isTouchingGround == true && canJump == true)
         {
-            if ((Input.GetKeyDown(KeyCode.Space)))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
