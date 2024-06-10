@@ -5,6 +5,7 @@ using UnityEngine;
 public class FullTrashcan : MonoBehaviour
 {
     [SerializeField] public GameObject trash;
+    public Sprite full, empty;
     MovementController player;
     private bool isTrash = false;
     private bool isEmpty = false;
@@ -12,6 +13,7 @@ public class FullTrashcan : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
+        GetComponent<SpriteRenderer>().sprite = full;
         trash.SetActive(false);
     }
 
@@ -19,6 +21,8 @@ public class FullTrashcan : MonoBehaviour
     {
         if (isTrash == true && isEmpty == false && Input.GetKeyDown(KeyCode.E))
         {
+            GetComponent<SpriteRenderer>().sprite = empty;
+            
             trash.SetActive(true);
             isEmpty = true;
         }

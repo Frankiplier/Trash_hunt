@@ -5,11 +5,13 @@ using UnityEngine;
 public class EmptyTrashcan : MonoBehaviour
 {
     MovementController player;
+    public Sprite niu, old;
     private bool isTrash = false;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
+        GetComponent<SpriteRenderer>().sprite = niu;
     }
 
     void Update()
@@ -17,6 +19,7 @@ public class EmptyTrashcan : MonoBehaviour
         if (isTrash == true && Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Nie ma");
+                GetComponent<SpriteRenderer>().sprite = old;
             }
     }
 
