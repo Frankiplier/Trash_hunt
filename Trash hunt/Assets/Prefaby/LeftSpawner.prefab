@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed3e658e9fb5ea41bcb8e6196af6c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  humanAnim:
+  - {fileID: 5927586635602614503, guid: dd0d2262fb5ad34459d9368974333177, type: 3}
+  - {fileID: 2235844880566586327, guid: 98fbfb0afb7fdce479ec6314079eb6e9, type: 3}
+  - {fileID: 5507717482185919444, guid: 8e07f9e40b8d65449b71371b2a8b0b75, type: 3}
   human: {fileID: 2235844880566586327, guid: 98fbfb0afb7fdce479ec6314079eb6e9, type: 3}

@@ -13,7 +13,7 @@ public class RightHuman : MonoBehaviour
 
         if (transform.position.x < deadZone)
         {
-            Debug.Log("RIght human deleted");
+            Debug.Log("Right human deleted");
             Destroy(gameObject);
         }
     }

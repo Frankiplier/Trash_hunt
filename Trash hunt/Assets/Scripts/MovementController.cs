@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
 {
+    public Animator animator;
+
     public static SceneSwapManager instance;
     [SerializeField] public GameObject icon;
     [SerializeField] public GameObject gameOver;
@@ -71,6 +73,10 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
+        // kiedy jaka animacja
+        animator.SetFloat("Speed", Mathf.Abs(player.velocity.x));
+        animator.SetBool("OnGround", isTouchingGround);
+        animator.SetBool("IsHiding", IsHiding);
 
         if (isDashing)
         {
@@ -84,12 +90,12 @@ public class MovementController : MonoBehaviour
         if (direction < 0)  
         {
             player.velocity = new Vector2(direction * speed.variable, player.velocity.y);
-            transform.localScale = new Vector2(-0.8f, 0.8f);
+            transform.localScale = new Vector2(-1f, 1f);
         }
         else if (direction > 0)
         {
             player.velocity = new Vector2(direction * speed.variable, player.velocity.y);
-            transform.localScale = new Vector2(0.8f, 0.8f);
+            transform.localScale = new Vector2(1f, 1f);
         }
         else
         {

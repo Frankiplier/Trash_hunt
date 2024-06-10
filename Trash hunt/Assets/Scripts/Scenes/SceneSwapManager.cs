@@ -90,6 +90,6 @@ public class SceneSwapManager : MonoBehaviour
     {
         float colliderHeight = _playerCollider.bounds.extents.y;
 
-        _playerSpawnPosition = _streetCollider.transform.position - new Vector3(0f, 7 * colliderHeight, 0f);
+        _playerSpawnPosition = _streetCollider.transform.position - new Vector3(0f, 3 * colliderHeight, 0f);
     }
 }
