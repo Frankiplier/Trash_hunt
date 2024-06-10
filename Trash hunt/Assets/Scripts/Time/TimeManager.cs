@@ -1,15 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
+    public GameObject winGameOver;
+    public GameObject loseGameOver;
+
     public const int hoursInDay = 24, minutesInHour = 60;
 
     public float dayDuration; //ile w grze trwaja 24 h
 
     float totalTime = 0;
     float currentTime = 0;
+
+    void Start()
+    {
+        winGameOver.SetActive(false);
+        loseGameOver.SetActive(false);
+        Time.timeScale = 1f;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        StartCoroutine(EndGame());
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -48,5 +65,23 @@ public class TimeManager : MonoBehaviour
         if (hour == 0) hour = 12;
 
         return hour.ToString("00") + ":" + Mathf.FloorToInt(GetMinutes()).ToString("00") + " " + abbreviation;
+    }
+
+    private IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(150);
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Alley"))
+            {
+                winGameOver.SetActive(true);
+                Time.timeScale = 0f;
+            }
+
+            else if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Alley"))
+            {
+                loseGameOver.SetActive(true);
+                Time.timeScale = 0f;
+            }
+        }
     }
 }
