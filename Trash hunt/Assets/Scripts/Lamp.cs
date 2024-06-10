@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lamp : MonoBehaviour
 {
     [SerializeField] public GameObject flash;
+    public Sprite on, off;
     public GameObject lamp;
     MovementController player;
     private bool canTurn = false;
@@ -22,6 +23,7 @@ public class Lamp : MonoBehaviour
                 flash.SetActive(false);
                 lamp.GetComponent<BoxCollider2D>().enabled = false;
                 transform.gameObject.tag = "Troll";
+                GetComponent<SpriteRenderer>().sprite = off;
 
                 player.LampTurnedOff();
     
@@ -53,5 +55,6 @@ public class Lamp : MonoBehaviour
         lamp.GetComponent<BoxCollider2D>().enabled = true;
 
         transform.gameObject.tag = "Lamp";
+        GetComponent<SpriteRenderer>().sprite = on;
     }
 }

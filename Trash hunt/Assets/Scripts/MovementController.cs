@@ -90,12 +90,12 @@ public class MovementController : MonoBehaviour
         if (direction < 0)  
         {
             player.velocity = new Vector2(direction * speed.variable, player.velocity.y);
-            transform.localScale = new Vector2(-1f, 1f);
+            transform.localScale = new Vector2(-0.8f, 0.8f);
         }
         else if (direction > 0)
         {
             player.velocity = new Vector2(direction * speed.variable, player.velocity.y);
-            transform.localScale = new Vector2(1f, 1f);
+            transform.localScale = new Vector2(0.8f, 0.8f);
         }
         else
         {
