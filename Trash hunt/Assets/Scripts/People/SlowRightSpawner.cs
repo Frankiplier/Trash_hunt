@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SlowRightSpawner : MonoBehaviour
 {
-    public GameObject human;
+    [SerializeField] GameObject[] humanAnim;
+    private int randomPrefab;
+    
     private float targetTime;
 
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class SlowRightSpawner : MonoBehaviour
 
     void SpawnHuman()
     {
-        Instantiate(human, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        randomPrefab = Random.Range(0, 3);
+        Instantiate(humanAnim[randomPrefab], new Vector3(transform.position.x, transform.position.y, -1), transform.rotation);
     }
 }
