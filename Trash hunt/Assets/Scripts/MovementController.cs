@@ -18,6 +18,7 @@ public class MovementController : MonoBehaviour
     public bool canDark = false;
     public bool IsHiding = false;
     private bool canJump = true;
+    private bool canTrash = false;
 
     // normal movement 
     public Rigidbody2D player;
@@ -69,6 +70,8 @@ public class MovementController : MonoBehaviour
         icon.SetActive(false);
         speed.variable = 3f;
         scoreText.text = score.ToString();
+
+        animator.GetComponent<Animator>();
     }
 
     void Update()
@@ -142,6 +145,18 @@ public class MovementController : MonoBehaviour
             StartCoroutine(Dash());
         }
 
+        // if na animacje kopania
+        if (Input.GetKeyDown(KeyCode.E) && canDark == true)
+        {
+            animator.SetTrigger("Kick");
+        }
+
+        // if na animacje zbierania smieci
+        if (Input.GetKeyDown(KeyCode.E) && canTrash == true)
+        {
+            animator.SetTrigger("PickUpTrash");
+        }
+
         // kod na poruszanie sie triggera wraz z postacia
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
@@ -196,6 +211,8 @@ public class MovementController : MonoBehaviour
 
         if (other.tag == "Trash")
         {
+            canTrash = true;
+
             icon.SetActive(true);
             IsDisplayed = true;
         }
@@ -243,6 +260,8 @@ public class MovementController : MonoBehaviour
 
         if (other.tag == "Trash")
         {
+            canTrash = false;
+
             icon.SetActive(false);
             IsDisplayed = false;
         }
@@ -264,6 +283,7 @@ public class MovementController : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        animator.SetTrigger("Dash");
         canDash = false;
         isDashing = true;
         float originalGravity = player.gravityScale;

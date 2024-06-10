@@ -136,3 +136,4 @@ MonoBehaviour:
   pickedTrash: {fileID: 11400000, guid: 7bb684d3cda105948985d6308eee2570, type: 2}
   index: 0
   trash: {fileID: 7582501798753493109}
+  animator: {fileID: 0}

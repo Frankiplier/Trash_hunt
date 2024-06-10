@@ -13,6 +13,7 @@ public class Lamp : MonoBehaviour
     void Start()
     {
         flash.SetActive(true);
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
     }
 

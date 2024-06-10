@@ -8,7 +8,7 @@ public class Trash : MonoBehaviour
     [SerializeField] int index;
     public GameObject trash;
     MovementController player;
-    
+
     private bool canTrash = false;
 
     void Start()
