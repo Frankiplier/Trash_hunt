@@ -17,7 +17,6 @@ public class MovementController : MonoBehaviour
     public bool canHide = true;
     public bool canDark = false;
     public bool IsHiding = false;
-    private bool canJump = true;
     private bool canTrash = false;
 
     // normal movement 
@@ -29,16 +28,11 @@ public class MovementController : MonoBehaviour
     private Vector3 respawnPoint;
     public Transform fallDetector;
 
-    //jumping
-    public float jumpStrenght;
+    //groundcheck
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float groundCheckRadius;
     private bool isTouchingGround = true;
-
-    private float jumpTimeCounter;
-    public float jumpTime;
-    private bool isJumping;
 
     // dashing
     public bool canDash = true;
@@ -108,37 +102,6 @@ public class MovementController : MonoBehaviour
         // definicja groundcheckingu
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // ify na skakanie z ground checkiem
-        if (isTouchingGround == true && canJump == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                isJumping = true;
-                jumpTimeCounter = jumpTime;
-                player.velocity = new Vector2(player.velocity.x, jumpStrenght);
-            }
-        }
-
-        // ify na wyzszy skok przy przytrzymaniu klawisza - ma byc samo "GetKey"!!!
-        if ((Input.GetKey(KeyCode.Space)) && isJumping)
-        {
-            if (jumpTimeCounter > 0)
-            {
-                player.velocity = new Vector2(player.velocity.x, jumpStrenght);
-                jumpTimeCounter -= Time.deltaTime;
-            }
-
-            else 
-            {
-                isJumping = false;
-            }
-        }
-
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-        }
-
         // if na dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && IsHiding == false && isTouchingGround == true)
         {
@@ -166,14 +129,12 @@ public class MovementController : MonoBehaviour
             speed.variable = 1.5f;
             IsHiding = true;
             canDash = false;
-            canJump = false;
         }
         else if (canHide == true && Input.GetKeyUp(KeyCode.LeftControl))
         {
             speed.variable = 3f;
             IsHiding = false;
             canDash = true;
-            canJump = true;
         }
         else if (canHide == false)
         {
@@ -300,7 +261,7 @@ public class MovementController : MonoBehaviour
     {
         SceneFadeManager.instance.StartFadeOut();
         yield return new WaitForSeconds(tpTime);
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
         transform.position = respawnPoint;
         yield return new WaitForSeconds(fadeTime);
         SceneFadeManager.instance.StartFadeIn();
