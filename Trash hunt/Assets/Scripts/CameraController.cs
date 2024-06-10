@@ -11,10 +11,12 @@ public class CameraController : MonoBehaviour
 
     // do smieci
     [SerializeField] PickedTrashList trashList;
+    [SerializeField] CheckedBinsList binsList;
 
     void Start()
     {
         trashList.ResetList();
+        binsList.ResetSprites();
     }
 
     // Update is called once per frame
