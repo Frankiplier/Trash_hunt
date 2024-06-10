@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EmptyTrashcan : MonoBehaviour
 {
+    [SerializeField] CheckedBinsList checkedBins;
+    [SerializeField] int index;
+
     MovementController player;
     public Sprite niu, old;
     private bool isTrash = false;
@@ -11,7 +14,6 @@ public class EmptyTrashcan : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
-        GetComponent<SpriteRenderer>().sprite = niu;
     }
 
     void Update()
@@ -19,7 +21,9 @@ public class EmptyTrashcan : MonoBehaviour
         if (isTrash == true && Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Nie ma");
+
                 GetComponent<SpriteRenderer>().sprite = old;
+                checkedBins.checkedAllBins[index] = true;
             }
     }
 
@@ -36,6 +40,15 @@ public class EmptyTrashcan : MonoBehaviour
         if (other.tag == "Player") 
         {
             isTrash = false; 
+        }
+    }
+
+    private void Awake()
+    {
+        if (checkedBins.checkedAllBins[index])
+        {
+            GetComponent<SpriteRenderer>().sprite = old;
+            return;
         }
     }
 }

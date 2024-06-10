@@ -143,5 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35ad2a3806f014d836fa1ed13e07f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkedBins: {fileID: 11400000, guid: 1ad92772aedcc6f468609467ed6c6874, type: 2}
+  index: 0
   niu: {fileID: 21300000, guid: 8d64ffc9e9b31244a9d8e7b439c57aac, type: 3}
   old: {fileID: 21300000, guid: efaf83f3b5db1d2408ffbf02818f1d3a, type: 3}

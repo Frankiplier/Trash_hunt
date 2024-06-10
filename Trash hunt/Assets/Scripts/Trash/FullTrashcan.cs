@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FullTrashcan : MonoBehaviour
 {
+    [SerializeField] CheckedBinsList checkedBins;
+    [SerializeField] int index;
+
     [SerializeField] public GameObject trash;
     public Sprite full, empty;
     MovementController player;
@@ -13,7 +16,6 @@ public class FullTrashcan : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
-        GetComponent<SpriteRenderer>().sprite = full;
         trash.SetActive(false);
     }
 
@@ -22,6 +24,8 @@ public class FullTrashcan : MonoBehaviour
         if (isTrash == true && isEmpty == false && Input.GetKeyDown(KeyCode.E))
         {
             GetComponent<SpriteRenderer>().sprite = empty;
+
+            checkedBins.checkedAllBins[index] = true;
             
             trash.SetActive(true);
             isEmpty = true;
@@ -41,6 +45,15 @@ public class FullTrashcan : MonoBehaviour
         if (other.tag == "Player") 
         {
             isTrash = false; 
+        }
+    }
+
+    private void Awake()
+    {
+        if (checkedBins.checkedAllBins[index])
+        {
+            GetComponent<SpriteRenderer>().sprite = empty;
+            return;
         }
     }
 }
