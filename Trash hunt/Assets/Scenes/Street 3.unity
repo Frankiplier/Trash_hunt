@@ -613,7 +613,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 646255245011478895, guid: 565e3c832eb361648847c9f967b33585, type: 3}
       propertyPath: m_Name
-      value: DIgital clock
+      value: Digital clock
       objectReference: {fileID: 0}
     - target: {fileID: 1508198519034336500, guid: 565e3c832eb361648847c9f967b33585, type: 3}
       propertyPath: m_Pivot.x
