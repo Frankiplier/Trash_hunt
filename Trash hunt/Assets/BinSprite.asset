@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8586f7b4f04808488a17df22fbc82da, type: 3}
   m_Name: BinSprite
   m_EditorClassIdentifier: 
-  checkedAllBins: 0000000000
+  checkedAllBins: 0000000000000000000000
