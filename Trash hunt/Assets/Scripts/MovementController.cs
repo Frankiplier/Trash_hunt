@@ -62,7 +62,7 @@ public class MovementController : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
-        speed.variable = 3f;
+        speed.variable = 5f;
         scoreText.text = score.ToString();
 
         animator.GetComponent<Animator>();
