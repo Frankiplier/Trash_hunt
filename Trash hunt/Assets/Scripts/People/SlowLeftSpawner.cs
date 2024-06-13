@@ -24,7 +24,7 @@ public class SlowLeftSpawner : MonoBehaviour
         {
             SpawnHuman();
 
-            targetTime = Random.Range(15, 30);
+            targetTime = Random.Range(10, 25);
         }
     }
 
