@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hooman : MonoBehaviour
 {
-     [SerializeField] FloatContainer speed;
+    [SerializeField] FloatContainer speed;
 
     [SerializeField] public GameObject green;
     [SerializeField] public GameObject yellow;
@@ -24,10 +24,12 @@ public class Hooman : MonoBehaviour
         if (speed.variable == 1.5f) 
         {
             yellow.GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
-        else if (speed.variable == 3f) 
+        else if (speed.variable == 3.5f) 
         {
             yellow.GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 
