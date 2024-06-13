@@ -62,7 +62,7 @@ public class MovementController : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
-        speed.variable = 5f;
+        speed.variable = 3.5f;
         scoreText.text = score.ToString();
 
         animator.GetComponent<Animator>();
@@ -132,13 +132,13 @@ public class MovementController : MonoBehaviour
         }
         else if (canHide == true && Input.GetKeyUp(KeyCode.LeftControl))
         {
-            speed.variable = 3f;
+            speed.variable = 3.5f;
             IsHiding = false;
             canDash = true;
         }
         else if (canHide == false)
         {
-            speed.variable = 3f;
+            speed.variable = 3.5f;
             IsHiding = false;
         }
     }
