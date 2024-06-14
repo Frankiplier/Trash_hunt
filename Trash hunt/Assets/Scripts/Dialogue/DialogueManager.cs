@@ -80,6 +80,6 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         animator.Play("hide");
-        speed.variable = 3f;
+        speed.variable = 3.5f;
     }
 }

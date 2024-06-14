@@ -28,7 +28,7 @@ public class NPCDialogue : MonoBehaviour
                 timesInteracted--;
             }
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (timesInteracted == 0 && Input.GetKeyDown(KeyCode.Return))
             {
                 DialogueManager.Instance.DisplayNextDialogueLine();
             }
