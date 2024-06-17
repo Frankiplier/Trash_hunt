@@ -18,6 +18,9 @@ public class CameraController : MonoBehaviour
     {
         trashList.ResetList();
         binsList.ResetSprites();
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
