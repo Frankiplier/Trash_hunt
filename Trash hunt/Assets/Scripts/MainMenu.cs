@@ -11,9 +11,7 @@ public class MainMenu : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 0f;
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        
         credits.SetActive(false);
     }
 
