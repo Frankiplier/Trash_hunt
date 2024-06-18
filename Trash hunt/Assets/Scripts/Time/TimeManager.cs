@@ -37,6 +37,12 @@ public class TimeManager : MonoBehaviour
     {
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
+
+        // if na zamkniecie gry po zostaniu zlapanym
+        if (PauseMenu.isPaused == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
     }
 
     public float GetHour()
@@ -73,22 +79,17 @@ public class TimeManager : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(150);
+        yield return new WaitForSeconds(10);
         {
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Alley"))
             {
                 winGameOver.SetActive(true);
-                trashIcon.SetActive(false);
-                score.SetActive(false);
                 pause.SetActive(false);
                 hearts.SetActive(false);
 
                 Time.timeScale = 0f;
-
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    QuitGame();
-                }
+                PauseMenu.canPause = false;
+                PauseMenu.isPaused = true;
             }
 
             else if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Alley"))
@@ -100,11 +101,8 @@ public class TimeManager : MonoBehaviour
                 hearts.SetActive(false);
 
                 Time.timeScale = 0f;
-
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    QuitGame();
-                }
+                PauseMenu.canPause = false;
+                PauseMenu.isPaused = true;
             }
         }
     }

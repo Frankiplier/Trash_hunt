@@ -144,6 +144,12 @@ public class MovementController : MonoBehaviour
             speed.variable = 3.5f;
             IsHiding = false;
         }
+
+        // if na zamkniecie gry po zostaniu zlapanym
+        if (PauseMenu.isPaused == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -201,6 +207,8 @@ public class MovementController : MonoBehaviour
                 pause.SetActive(false);
 
                 Time.timeScale = 0f;
+                PauseMenu.canPause = false;
+                PauseMenu.isPaused = true;
             }
         }
     }
@@ -247,6 +255,11 @@ public class MovementController : MonoBehaviour
         IsDisplayed = false;
 
         canHide = true;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private IEnumerator Dash()

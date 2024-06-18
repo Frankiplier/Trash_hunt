@@ -5,20 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject press;
     public GameObject pauseMenu;
     public static bool isPaused;
+    public static bool canPause;
 
     [SerializeField] AudioSource music;
 
     void Start()
     {
         isPaused = false;
+        canPause = true;
         pauseMenu.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canPause == true)
         {
             if (isPaused == false)
             {
@@ -40,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
+        press.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
 
@@ -49,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        press.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
 
