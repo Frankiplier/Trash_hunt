@@ -8,17 +8,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public static bool isPaused;
 
-    // Start is called before the first frame update
+    [SerializeField] AudioSource music;
+
     void Start()
     {
         isPaused = false;
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isPaused == false)
             {
@@ -30,6 +30,11 @@ public class PauseMenu : MonoBehaviour
                 ResumeGame();
             }
         }
+
+        if (isPaused == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
     }
 
     public void PauseGame()
@@ -37,6 +42,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+
+        music.Pause();
     }
 
     public void ResumeGame()
@@ -44,5 +51,12 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+
+        music.Play();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

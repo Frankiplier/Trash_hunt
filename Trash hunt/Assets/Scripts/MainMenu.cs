@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject credits;
-
+    bool creditsEnabled;
 
     public void Start()
     {
         Time.timeScale = 0f;
-        
+
         credits.SetActive(false);
+        creditsEnabled = false;
+        
+        gameObject.GetComponent<Button>().onClick.AddListener(Credits);
     }
 
     public void PlayGame()
@@ -22,7 +26,8 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        credits.SetActive(true);
+        creditsEnabled ^= true;
+        credits.SetActive(creditsEnabled);
     }
 
     public void QuitGame()

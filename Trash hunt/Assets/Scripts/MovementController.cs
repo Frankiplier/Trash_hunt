@@ -11,6 +11,9 @@ public class MovementController : MonoBehaviour
     public static SceneSwapManager instance;
     [SerializeField] public GameObject icon;
     [SerializeField] public GameObject gameOver;
+    public GameObject trashIcon;
+    public GameObject scoreEnd;
+    public GameObject pause;
 
     // bools
     public bool IsDisplayed = false;
@@ -193,6 +196,10 @@ public class MovementController : MonoBehaviour
             if (HealthManager.health <= 0)
             {
                 gameOver.SetActive(true);
+                trashIcon.SetActive(false);
+                scoreEnd.SetActive(false);
+                pause.SetActive(false);
+
                 Time.timeScale = 0f;
             }
         }

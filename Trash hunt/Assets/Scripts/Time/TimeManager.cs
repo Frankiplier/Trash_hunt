@@ -7,6 +7,10 @@ public class TimeManager : MonoBehaviour
 {
     public GameObject winGameOver;
     public GameObject loseGameOver;
+    public GameObject trashIcon;
+    public GameObject score;
+    public GameObject pause;
+    public GameObject hearts;
 
     public const int hoursInDay = 24, minutesInHour = 60;
 
@@ -74,14 +78,39 @@ public class TimeManager : MonoBehaviour
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Alley"))
             {
                 winGameOver.SetActive(true);
+                trashIcon.SetActive(false);
+                score.SetActive(false);
+                pause.SetActive(false);
+                hearts.SetActive(false);
+
                 Time.timeScale = 0f;
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    QuitGame();
+                }
             }
 
             else if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Alley"))
             {
                 loseGameOver.SetActive(true);
+                trashIcon.SetActive(false);
+                score.SetActive(false);
+                pause.SetActive(false);
+                hearts.SetActive(false);
+
                 Time.timeScale = 0f;
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    QuitGame();
+                }
             }
         }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
