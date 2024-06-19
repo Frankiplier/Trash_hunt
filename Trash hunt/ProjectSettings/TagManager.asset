@@ -14,6 +14,7 @@ TagManager:
   - Trash
   - Score
   - Trashcan
+  - Tutorial
   layers:
   - Default
   - TransparentFX
