@@ -6,7 +6,6 @@ public class NPCDialogue : MonoBehaviour
 {
     private bool canTalk;
     public float timesInteracted = 1;
-    private Transform player;
     private SpriteRenderer speechBubble;
     public DialogueTrigger dialogueTrigger;
 
@@ -51,18 +50,6 @@ public class NPCDialogue : MonoBehaviour
             {
                 speechBubble.enabled = true;
             }
-
-            player = other.gameObject.GetComponent<Transform>();
-
-            if (player.position.x > transform.position.x && transform.parent.localScale.x < 0)
-            {
-                Flip();
-            }
-
-            else if (player.position.x < transform.position.x && transform.parent.localScale.x > 0)
-            {
-                Flip();
-            }
         }
     }
 
@@ -73,12 +60,5 @@ public class NPCDialogue : MonoBehaviour
             speechBubble.enabled = false;
             canTalk = false;
         }
-    }
-
-    private void Flip()
-    {
-        Vector3 currentScale = transform.parent.localScale;
-        currentScale.x *= -1;
-        transform.parent.localScale = currentScale;
     }
 }
