@@ -17,8 +17,6 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
  
     public float typingSpeed = 0.2f;
-
-    public FloatContainer speed;
  
     public Animator animator;
  
@@ -35,8 +33,6 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = true;
  
         animator.Play("show");
-
-        speed.variable = 0f;
  
         lines.Clear();
  
@@ -80,6 +76,5 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         animator.Play("hide");
-        speed.variable = 3.5f;
     }
 }
