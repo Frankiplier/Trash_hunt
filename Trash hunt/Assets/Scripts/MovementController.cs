@@ -160,6 +160,12 @@ public class MovementController : MonoBehaviour
             transform.position = respawnPoint;
         }
 
+        if (other.tag == "Tutorial")
+        {
+            icon.SetActive(true);
+            IsDisplayed = true;
+        }
+
         if (other.tag == "Street")
         {
             icon.SetActive(true);
@@ -216,6 +222,12 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.tag == "Tutorial")
+        {
+            icon.SetActive(false);
+            IsDisplayed = false;
+        }
+
         if (other.tag == "Street")
         {
             icon.SetActive(false);
