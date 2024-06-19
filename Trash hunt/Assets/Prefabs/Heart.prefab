@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0d19fee13982a4faf7de40d3fefb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHeart: {fileID: 1182068143, guid: f693cfcd1516c8d4ea3744712ea74a02, type: 3}
-  emptyHeart: {fileID: -463344233, guid: f693cfcd1516c8d4ea3744712ea74a02, type: 3}
+  fullHeart: {fileID: 21300000, guid: 3fd934bdc202bbd4d89604c104f47c43, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 9fcf23f9a3703f44ab15261f8e8f3277, type: 3}
