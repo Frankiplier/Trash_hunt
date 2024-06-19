@@ -1123,19 +1123,19 @@ PrefabInstance:
       objectReference: {fileID: 812790168}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9157128
+      value: 0.89465135
       objectReference: {fileID: 0}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6312735
+      value: 0.6444671
       objectReference: {fileID: 0}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0514
+      value: -0.0712
       objectReference: {fileID: 0}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7768
+      value: 1.7702
       objectReference: {fileID: 0}
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_Size.y
@@ -1148,6 +1148,11 @@ PrefabInstance:
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].line
+      value: I got you, man. Just go left into the second canal, you should find
+        a pile of trash.
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[0].character.icon

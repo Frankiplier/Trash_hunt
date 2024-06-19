@@ -1406,7 +1406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[5].line
-      value: I hope so, too! Thank you!
+      value: I hope so! Thank you!
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[0].character.icon
@@ -1414,7 +1414,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 64642bcbf74ac9744974d8c639217b56, type: 3}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[0].character.name
-      value: Remy
+      value: Momos
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[1].character.icon
@@ -1426,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 64642bcbf74ac9744974d8c639217b56, type: 3}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[2].character.name
-      value: Remy
+      value: Momos
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[3].character.icon
@@ -1438,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 64642bcbf74ac9744974d8c639217b56, type: 3}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[4].character.name
-      value: Remy
+      value: Momos
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[5].character.icon

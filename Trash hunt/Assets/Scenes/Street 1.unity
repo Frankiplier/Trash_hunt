@@ -1720,35 +1720,35 @@ PrefabInstance:
       objectReference: {fileID: 793023656}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9056358
+      value: 0.8722699
       objectReference: {fileID: 0}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6929068
+      value: 0.57736385
       objectReference: {fileID: 0}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.23
+      value: -0.2005
       objectReference: {fileID: 0}
     - target: {fileID: 1747393915568799477, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.49
+      value: 1.3227
       objectReference: {fileID: 0}
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_Size.x
-      value: 3.5625303
+      value: 4.7022095
       objectReference: {fileID: 0}
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_Size.y
-      value: 3.7063656
+      value: 3.0147781
       objectReference: {fileID: 0}
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_Offset.x
-      value: 0.04201305
+      value: 0.0013575554
       objectReference: {fileID: 0}
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_Offset.y
-      value: -10.055266
+      value: -12.398399
       objectReference: {fileID: 0}
     - target: {fileID: 2110834031858907796, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1780,7 +1780,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: db82d649fbd266f40aab084c08aae09d, type: 3}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[0].character.name
-      value: Cat
+      value: Daren
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[1].character.icon
@@ -1792,7 +1792,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: db82d649fbd266f40aab084c08aae09d, type: 3}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[2].character.name
-      value: Cat
+      value: Daren
       objectReference: {fileID: 0}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[3].character.icon
@@ -1804,7 +1804,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: db82d649fbd266f40aab084c08aae09d, type: 3}
     - target: {fileID: 2161073523596643009, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: dialogue.dialogueLines.Array.data[4].character.name
-      value: Cat
+      value: Daren
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703288254021937025, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2703288254021937025, guid: 57bc9563f5c745f4f8dbb62af618c3cc, type: 3}
       propertyPath: m_LocalPosition.x
