@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3258711496226105700}
   - component: {fileID: 6575780247637600484}
   - component: {fileID: 5139766888623510872}
-  - component: {fileID: 2680811983937130347}
+  - component: {fileID: -3001090141052974690}
   m_Layer: 0
   m_Name: FullTrashcan3
   m_TagString: Untagged
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ea6131d5a01c5a6438198bc0e5fdd849, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 231414733a860074bba9c9883316ed40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 4.125}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,8 +122,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 4.125}
-    newSize: {x: 5, y: 4.125}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.998296, y: 3.656331}
   m_EdgeRadius: 0
---- !u!114 &2680811983937130347
+--- !u!114 &-3001090141052974690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,10 +140,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6519750830316984054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a35ad2a3806f014d836fa1ed13e07f1, type: 3}
+  m_Script: {fileID: 11500000, guid: ccdbd62184bedb04bab267554d8a5dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   checkedBins: {fileID: 11400000, guid: 1ad92772aedcc6f468609467ed6c6874, type: 2}
   index: 0
-  niu: {fileID: 21300000, guid: ea6131d5a01c5a6438198bc0e5fdd849, type: 3}
-  old: {fileID: 21300000, guid: 7c81dd909fade7e41b031df7dffc543c, type: 3}
+  trash: {fileID: 0}
+  full: {fileID: 21300000, guid: 231414733a860074bba9c9883316ed40, type: 3}
+  empty: {fileID: 21300000, guid: 28fe5d4df74a07442bc4ff65cdceae78, type: 3}
