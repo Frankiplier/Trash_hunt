@@ -145,5 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkedBins: {fileID: 11400000, guid: 1ad92772aedcc6f468609467ed6c6874, type: 2}
   index: 0
-  niu: {fileID: 21300000, guid: 0322632f1fe02a8439395d7fd54aae53, type: 3}
+  niu: {fileID: 21300000, guid: 24f281ea0b03c3c48af8d78ca782738e, type: 3}
   old: {fileID: 21300000, guid: f53db018df1809843b88cf9a9bc609f7, type: 3}
