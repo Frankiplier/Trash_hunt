@@ -79,7 +79,7 @@ public class TimeManager : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(480);
+        yield return new WaitForSeconds(720);
         {
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Alley"))
             {
