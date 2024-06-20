@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MovementController : MonoBehaviour
 {
     public Animator animator;
-    public AudioSource audio;
+    public AudioSource audioSource;
 
     public static SceneSwapManager instance;
     [SerializeField] public GameObject icon;
@@ -277,7 +277,7 @@ public class MovementController : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        audio.Play();
+        audioSource.Play();
         animator.SetTrigger("Dash");
         canDash = false;
         isDashing = true;
