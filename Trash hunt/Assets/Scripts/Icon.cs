@@ -12,12 +12,12 @@ public class Icon : MonoBehaviour
 
         if (direction < 0)  
         {
-            transform.localScale = new Vector2(-0.8f, 0.8f);
+            transform.localScale = new Vector2(-0.75f, 0.75f);
         }
 
         else if (direction > 0)
         {
-            transform.localScale = new Vector2(0.8f, 0.8f);
+            transform.localScale = new Vector2(0.75f, 0.75f);
         }
     }
 }
