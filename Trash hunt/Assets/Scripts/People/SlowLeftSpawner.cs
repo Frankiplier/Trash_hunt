@@ -31,6 +31,6 @@ public class SlowLeftSpawner : MonoBehaviour
     void SpawnHuman()
     {
         randomPrefab = Random.Range(0, 3);
-        Instantiate(humanAnim[randomPrefab], new Vector3(transform.position.x, transform.position.y, -3), transform.rotation);
+        Instantiate(humanAnim[randomPrefab], new Vector3(transform.position.x, transform.position.y, -5), transform.rotation);
     }
 }
