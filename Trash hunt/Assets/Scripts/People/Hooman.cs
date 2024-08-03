@@ -26,7 +26,7 @@ public class Hooman : MonoBehaviour
             yellow.GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
         }
-        else if (speed.variable == 3.5f) 
+        else if (speed.variable == 4.5f) 
         {
             yellow.GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<BoxCollider2D>().enabled = true;

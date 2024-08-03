@@ -6,6 +6,8 @@ using TMPro;
  
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] FloatContainer speed;
+
     public static DialogueManager Instance;
  
     public Image characterIcon;
@@ -51,6 +53,8 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
+        speed.variable = 1.5f;
  
         DialogueLine currentLine = lines.Dequeue();
  
@@ -74,6 +78,7 @@ public class DialogueManager : MonoBehaviour
  
     void EndDialogue()
     {
+        speed.variable = 4.5f;
         isDialogueActive = false;
         animator.Play("hide");
     }

@@ -95,8 +95,6 @@ public class TimeManager : MonoBehaviour
             else if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Alley"))
             {
                 loseGameOver.SetActive(true);
-                trashIcon.SetActive(false);
-                score.SetActive(false);
                 pause.SetActive(false);
                 hearts.SetActive(false);
 

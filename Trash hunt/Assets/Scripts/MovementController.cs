@@ -66,7 +66,7 @@ public class MovementController : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         icon.SetActive(false);
-        speed.variable = 3.5f;
+        speed.variable = 4.5f;
         scoreText.text = score.ToString();
 
         animator.GetComponent<Animator>();
@@ -136,13 +136,13 @@ public class MovementController : MonoBehaviour
         }
         else if (canHide == true && Input.GetKeyUp(KeyCode.LeftControl))
         {
-            speed.variable = 3.5f;
+            speed.variable = 4.5f;
             IsHiding = false;
             canDash = true;
         }
         else if (canHide == false)
         {
-            speed.variable = 3.5f;
+            speed.variable = 4.5f;
             IsHiding = false;
         }
 
@@ -209,8 +209,6 @@ public class MovementController : MonoBehaviour
             if (HealthManager.health <= 0)
             {
                 gameOver.SetActive(true);
-                trashIcon.SetActive(false);
-                scoreEnd.SetActive(false);
                 pause.SetActive(false);
 
                 Time.timeScale = 0f;

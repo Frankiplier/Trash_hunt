@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Programming: frankiplier'
+  m_text: 'Programming: Frankiplier'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 089f352d75d4ba740921cb43b4b71efd, type: 2}
   m_sharedMaterial: {fileID: -7198505971967600720, guid: 089f352d75d4ba740921cb43b4b71efd, type: 2}
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Art: rakun'
+  m_text: 'Art: Rakuntanuki'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 089f352d75d4ba740921cb43b4b71efd, type: 2}
   m_sharedMaterial: {fileID: -7198505971967600720, guid: 089f352d75d4ba740921cb43b4b71efd, type: 2}
